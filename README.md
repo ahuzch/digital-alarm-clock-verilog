@@ -8,7 +8,7 @@ and synthesized using fast and slow standard cell libraries.
 ## File Structure
 
 ```
-digital-alarm-clock-verilog/
+digital-alarm-clock/
 ├── rtl/
 │   └── alarm_clock.v
 ├── simulation/
