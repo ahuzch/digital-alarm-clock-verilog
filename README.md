@@ -85,27 +85,12 @@ and automatically deasserts once the time no longer matches.
 |---|---|
 | ![Power Fast](reports/synthesis/power_fast.png) | ![Power Slow](reports/synthesis/power_slow.png) |
 
-| | Fast Library | Slow Library |
-|---|---|---|
-| **Cells** | 115 | 118 |
-| **Leakage (nW)** | 16.223 | 5.457 |
-| **Internal (nW)** | 8971.265 | 5511.758 |
-| **Net (nW)** | 1425.914 | 741.258 |
-| **Switching (nW)** | 10397.179 | 6253.015 |
-
 ---
 
 ### Netlist Statistics
 | Fast Library | Slow Library |
 |---|---|
 | ![Netlist Stats Fast](reports/synthesis/netlist_stats_fast.png) | ![Netlist Stats Slow](reports/synthesis/netlist_stats_slow.png) |
-
-| Type | Fast Instances | Fast Area | Slow Instances | Slow Area |
-|---|---|---|---|---|
-| **Sequential** | 18 | 168.264 | 18 | 168.264 |
-| **Logic** | 77 | 127.566 | 77 | 124.488 |
-| **Inverter** | 20 | 13.680 | 23 | 15.732 |
-| **Total** | 115 | 309.510 | 118 | 308.484 |
 
 ---
 
@@ -114,9 +99,4 @@ and automatically deasserts once the time no longer matches.
 |---|---|
 | ![Gate Count Fast](reports/synthesis/gate_count_fast.png) | ![Gate Count Slow](reports/synthesis/gate_count_slow.png) |
 
-| | Fast Library | Slow Library |
-|---|---|---|
-| **Cells** | 115 | 118 |
-| **Cell Area** | 309.510 | 308.484 |
-| **Net Area** | 0.000 | 0.000 |
-| **Total Area** | 309.510 | 308.484 |
+
