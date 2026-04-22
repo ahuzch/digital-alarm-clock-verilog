@@ -3,7 +3,7 @@
 // Description: 24-hour digital alarm clock with
 //              reset and alarm functionality
 // Course:      EE411L      
-// Date:        2025
+// Date:        April 2025
 // ============================================
 
 module alarm_clock(
