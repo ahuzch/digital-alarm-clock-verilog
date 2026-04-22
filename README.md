@@ -11,7 +11,7 @@ and synthesized using fast and slow standard cell libraries.
 digital-alarm-clock/
 ├── rtl/
 │   └── alarm_clock.v
-├── simulation/
+├── testbench/
 │   └── alarm_clock_TB.v
 ├── constraint/
 │   └── constraints_top.sdc
@@ -26,7 +26,7 @@ digital-alarm-clock/
 ## File Descriptions
 
 - `rtl/alarm_clock.v` — Main RTL design module containing clock counting, reset, and alarm detection logic
-- `simulation/alarm_clock_TB.v` — Testbench that generates clock signal, applies reset, and verifies alarm behavior
+- `testbench/alarm_clock_TB.v` — Testbench that generates clock signal, applies reset, and verifies alarm behavior
 - `constraint/constraints_top.sdc` — Timing constraints defining clock period, rise/fall times, and input/output delays
 - `synthesis/rc_script.tcl` — TCL script for Cadence Genus synthesis, reads design, applies constraints, and writes netlist
 
