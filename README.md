@@ -25,11 +25,11 @@ digital-alarm-clock-verilog/
 │   └── alarm_flag.png
 └── synthesis/
 ├── schematic_fast.png
-├── schematic_slow.png
-├── power_fast.png
-├── power_slow.png
-├── netlist_stats_fast.png
-├── netlist_stats_slow.png
-├── gate_count_fast.png
-└── gate_count_slow.png
+    ├── schematic_slow.png
+    ├── power_fast.png
+    ├── power_slow.png
+    ├── netlist_stats_fast.png
+    ├── netlist_stats_slow.png
+    ├── gate_count_fast.png
+    └── gate_count_slow.png
 ```
