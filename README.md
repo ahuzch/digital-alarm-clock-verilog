@@ -38,8 +38,7 @@ digital-alarm-clock-verilog/
 ## Simulation Results
 
 ### Reset Function
-At 5ns the reset signal goes high, updating the seconds, minutes and hours to the reset inputs. At 10ns the reset is deasserted and
-normal clock operation resumes.
+At 5ns the reset signal goes high, updating the seconds, minutes and hours to the reset inputs. At 10ns the reset signal is pulled low and normal clock operation resumes.
 
 ![Reset Function](reports/waveforms/reset_function.png)
 
@@ -62,8 +61,8 @@ clock edge and the hours counter increments by 1.
 
 ### Alarm Flag Triggered at 2 Minutes
 When the current time matches the preset alarm time (00:02), the alarm
-flag is immediately asserted. It remains high for exactly one minute
-and automatically deasserts once the time no longer matches.
+flag immediately goes high. It remains high for exactly one minute
+and automatically pulled low once the time no longer matches.
 
 ![Alarm Flag](reports/waveforms/alarm_flag.png)
 
