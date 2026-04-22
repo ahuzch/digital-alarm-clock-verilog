@@ -33,3 +33,90 @@ digital-alarm-clock-verilog/
     ├── gate_count_fast.png
     └── gate_count_slow.png
 ```
+---
+
+## Simulation Results
+
+### Reset Function
+At 5ns the reset signal is asserted, clearing seconds to 0 and loading
+the preset hour and minute values. At 10ns the reset is deasserted and
+normal clock operation resumes.
+
+![Reset Function](reports/waveforms/reset_function.png)
+
+---
+
+### Seconds to Minutes Rollover
+When the seconds counter reaches 59, it resets to 0 on the next positive
+clock edge and the minutes counter increments by 1.
+
+![One Minute](reports/waveforms/one_minute.png)
+
+---
+
+### Minutes to Hours Rollover
+When the minutes counter reaches 59, it resets to 0 on the next positive
+clock edge and the hours counter increments by 1.
+
+![One Hour](reports/waveforms/one_hour.png)
+
+---
+
+### Alarm Flag Triggered at 2 Minutes
+When the current time matches the preset alarm time (00:02), the alarm
+flag is immediately asserted. It remains high for exactly one minute
+and automatically deasserts once the time no longer matches.
+
+![Alarm Flag](reports/waveforms/alarm_flag.png)
+
+---
+
+## Synthesis Results
+
+### Schematic View
+| Fast Library | Slow Library |
+|---|---|
+| ![Schematic Fast](reports/synthesis/schematic_fast.png) | ![Schematic Slow](reports/synthesis/schematic_slow.png) |
+
+---
+
+### Power Report
+| Fast Library | Slow Library |
+|---|---|
+| ![Power Fast](reports/synthesis/power_fast.png) | ![Power Slow](reports/synthesis/power_slow.png) |
+
+| | Fast Library | Slow Library |
+|---|---|---|
+| **Cells** | 115 | 118 |
+| **Leakage (nW)** | 16.223 | 5.457 |
+| **Internal (nW)** | 8971.265 | 5511.758 |
+| **Net (nW)** | 1425.914 | 741.258 |
+| **Switching (nW)** | 10397.179 | 6253.015 |
+
+---
+
+### Netlist Statistics
+| Fast Library | Slow Library |
+|---|---|
+| ![Netlist Stats Fast](reports/synthesis/netlist_stats_fast.png) | ![Netlist Stats Slow](reports/synthesis/netlist_stats_slow.png) |
+
+| Type | Fast Instances | Fast Area | Slow Instances | Slow Area |
+|---|---|---|---|---|
+| **Sequential** | 18 | 168.264 | 18 | 168.264 |
+| **Logic** | 77 | 127.566 | 77 | 124.488 |
+| **Inverter** | 20 | 13.680 | 23 | 15.732 |
+| **Total** | 115 | 309.510 | 118 | 308.484 |
+
+---
+
+### Gate Count Report
+| Fast Library | Slow Library |
+|---|---|
+| ![Gate Count Fast](reports/synthesis/gate_count_fast.png) | ![Gate Count Slow](reports/synthesis/gate_count_slow.png) |
+
+| | Fast Library | Slow Library |
+|---|---|---|
+| **Cells** | 115 | 118 |
+| **Cell Area** | 309.510 | 308.484 |
+| **Net Area** | 0.000 | 0.000 |
+| **Total Area** | 309.510 | 308.484 |
