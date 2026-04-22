@@ -38,8 +38,7 @@ digital-alarm-clock-verilog/
 ## Simulation Results
 
 ### Reset Function
-At 5ns the reset signal is asserted, clearing seconds to 0 and loading
-the preset hour and minute values. At 10ns the reset is deasserted and
+At 5ns the reset signal goes high, updating the seconds, minutes and hours to the reset inputs. At 10ns the reset is deasserted and
 normal clock operation resumes.
 
 ![Reset Function](reports/waveforms/reset_function.png)
@@ -47,8 +46,7 @@ normal clock operation resumes.
 ---
 
 ### Seconds to Minutes Rollover
-When the seconds counter reaches 59, it resets to 0 on the next positive
-clock edge and the minutes counter increments by 1.
+When the seconds counter reaches 59, it resets to 0 on the next positive clock edge and the minutes counter increments by 1.
 
 ![One Minute](reports/waveforms/one_minute.png)
 
